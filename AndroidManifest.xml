@@ -447,6 +447,13 @@
                  <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
+        
+        <!-- Broadcast Receiver that will process EOS LTE Toggle -->
+        <receiver android:name="EosLteToggleReceiver" android:exported="true">
+            <intent-filter android:priority="100">
+                 <action android:name="org.teameos.intent.action.TOGGLE_LTE"/>
+            </intent-filter>
+        </receiver>
 
         <!-- CDMA Emergency Callback Mode -->
         <service android:name="EmergencyCallbackModeService">
